@@ -34,7 +34,7 @@ export default function TrackDetails() {
         <Spinner />
       ) : (
         <>
-          <Link className="btn btn-dark btn-sm" to="/musicapp">
+          <Link className="btn btn-dark btn-sm" to="/musicapp/">
             Go Back
           </Link>
           <div className="card my-4">
