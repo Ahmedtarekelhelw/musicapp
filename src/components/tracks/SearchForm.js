@@ -7,7 +7,10 @@ export default function SearchForm() {
 
   let onsubmit = (e) => {
     e.preventDefault();
-    dispatch({ type: "search", payload: e.target.track_name.value });
+    if (e.target.track_name.value) {
+      dispatch({ type: "search", payload: e.target.track_name.value });
+      e.target.track_name.value = "";
+    }
   };
 
   return (

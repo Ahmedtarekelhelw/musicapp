@@ -28,14 +28,13 @@ export default function TrackDetails() {
       })
       .catch((err) => console.log(err));
   }, []);
-  console.log(lyrics);
   return (
     <>
       {loading ? (
         <Spinner />
       ) : (
         <>
-          <Link className="btn btn-dark btn-sm" to="/">
+          <Link className="btn btn-dark btn-sm" to="/musicapp">
             Go Back
           </Link>
           <div className="card my-4">

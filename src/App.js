@@ -12,7 +12,7 @@ function App() {
           <Navbar />
           <div className="container">
             <Routes>
-              <Route path="/" exact element={<Index />} />
+              <Route path="/musicapp" exact element={<Index />} />
               <Route
                 path="/track-details/:id"
                 exact
