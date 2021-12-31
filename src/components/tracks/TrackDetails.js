@@ -14,12 +14,12 @@ export default function TrackDetails() {
   useEffect(() => {
     axios
       .get(
-        `https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${id}&apikey=${process.env.REACT_APP_API_KEY}`
+        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${id}&apikey=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
         setLyrics(res.data.message.body.lyrics);
         return axios.get(
-          `https://api.musixmatch.com/ws/1.1/track.get?track_id=${id}&apikey=${process.env.REACT_APP_API_KEY}`
+          `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${id}&apikey=${process.env.REACT_APP_API_KEY}`
         );
       })
       .then((res) => {
