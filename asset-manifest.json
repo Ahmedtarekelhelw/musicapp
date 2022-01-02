@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/musicapp/static/css/main.1a8a0596.css",
-    "main.js": "/musicapp/static/js/main.4f8f6884.js",
+    "main.js": "/musicapp/static/js/main.e13874cb.js",
     "index.html": "/musicapp/index.html",
     "main.1a8a0596.css.map": "/musicapp/static/css/main.1a8a0596.css.map",
-    "main.4f8f6884.js.map": "/musicapp/static/js/main.4f8f6884.js.map"
+    "main.e13874cb.js.map": "/musicapp/static/js/main.e13874cb.js.map"
   },
   "entrypoints": [
     "static/css/main.1a8a0596.css",
-    "static/js/main.4f8f6884.js"
+    "static/js/main.e13874cb.js"
   ]
 }
