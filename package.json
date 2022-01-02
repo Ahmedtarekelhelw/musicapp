@@ -1,7 +1,7 @@
 {
   "homepage": "https://ahmedtarekelhelw.github.io/musicapp/",
   "name": "musicapp",
-  "proxy": "http://localhost:3000",
+  "proxy": "https://ahmedtarekelhelw.github.io/musicapp/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

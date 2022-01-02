@@ -16,12 +16,7 @@ export const Provider = ({ children }) => {
   useEffect(() => {
     axios
       .get(
-        `https://api.musixmatch.com/ws/1.1/track.search?q=${state.trackname}&page_size=10&page=1&f_has_lyrics=1&s_track_rating=desc&apikey=${process.env.REACT_APP_API_KEY}`,
-        {
-          method: "HEAD",
-          mode: "no-cors",
-          "Content-Type": "application/json; charset=utf-8",
-        }
+        `https://api.musixmatch.com/ws/1.1/track.search?q=${state.trackname}&page_size=10&page=1&f_has_lyrics=1&s_track_rating=desc&apikey=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
         dispatch({
