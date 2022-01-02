@@ -39,14 +39,12 @@ export default function TrackDetails() {
           </Link>
           <div className="card my-4">
             <div className="card-header h4">
-              {track.track_name} By{" "}
+              {track ? track.track_name : "Not avaliable"} By{" "}
               <span className="text-secondary">{track.artist_name}</span>
             </div>
             <div className="card-body">
               <p className="card-text"></p>
-              {lyrics.lyrics_body
-                ? lyrics.lyrics_body
-                : "There is Lyric Not Available"}
+              {lyrics ? lyrics.lyrics_body : "There is Lyric Not Available"}
             </div>
           </div>
           <ul className="list-group">
