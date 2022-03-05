@@ -12,8 +12,6 @@
 
 # Preview
 
-![React Movies](https://user-images.githubusercontent.com/76922296/156870941-95775569-4d1d-40a1-80b5-d44cad37de81.png)
+![Music App](https://user-images.githubusercontent.com/76922296/156890656-92e4853f-f7c0-4744-80d8-fb884bea65fa.png)
 
-![React Movies](https://user-images.githubusercontent.com/76922296/156870951-c21df3ee-75d0-4bbf-9b61-cb31a838be51.png)
-
-![React Movies](https://user-images.githubusercontent.com/76922296/156870957-d83ad1e5-10b8-41a5-954c-d2d50b190433.png)
+![Music App](https://user-images.githubusercontent.com/76922296/156890658-e0cc8bb4-9f76-4fb5-9ba3-dcbaa496077e.png)
