@@ -1,3 +1,19 @@
-# This project done with hooks && axios && bootstrap && Context api
+# musicapp
 
-This is Project Link https://ahmedtarekelhelw.github.io/musicapp/
+    Responsive Music App With API
+
+# Link of Website
+
+    https://ahmedtarekelhelw.github.io/musicapp
+
+# Resource
+
+    API: https://api.musixmatch.com
+
+# Preview
+
+![React Movies](https://user-images.githubusercontent.com/76922296/156870941-95775569-4d1d-40a1-80b5-d44cad37de81.png)
+
+![React Movies](https://user-images.githubusercontent.com/76922296/156870951-c21df3ee-75d0-4bbf-9b61-cb31a838be51.png)
+
+![React Movies](https://user-images.githubusercontent.com/76922296/156870957-d83ad1e5-10b8-41a5-954c-d2d50b190433.png)

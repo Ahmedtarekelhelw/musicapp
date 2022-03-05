@@ -12,12 +12,8 @@ function App() {
           <Navbar />
           <div className="container">
             <Routes>
-              <Route path="/musicapp/" exact element={<Index />} />
-              <Route
-                path="/track-details/:id"
-                exact
-                element={<TrackDetails />}
-              />
+              <Route path="musicapp" element={<Index />} />
+              <Route path="track-details/:id" element={<TrackDetails />} />
             </Routes>
           </div>
         </>

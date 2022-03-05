@@ -9,15 +9,15 @@ export const initstate = {
   trackname: "",
 };
 
+const SEARCH_URL = `/track.search?page_size=10&page=1&f_has_lyrics=1&s_track_rating=desc&apikey=${process.env.REACT_APP_API_KEY}`;
+
 export let Context = createContext();
 
 export const Provider = ({ children }) => {
   let [state, dispatch] = useReducer(reducer, initstate);
   useEffect(() => {
     axios
-      .get(
-        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?q=${state.trackname}&page_size=10&page=1&f_has_lyrics=1&s_track_rating=desc&apikey=${process.env.REACT_APP_API_KEY}`
-      )
+      .get(SEARCH_URL, { params: { q: state.trackname } })
       .then((res) => {
         dispatch({
           type: "fetchtracks",

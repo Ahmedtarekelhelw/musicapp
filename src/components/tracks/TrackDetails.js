@@ -4,30 +4,31 @@ import axios from "axios";
 import Spinner from "../layout/Spinner";
 import moment from "moment";
 
+const Lyrics_URL = `/track.lyrics.get?apikey=${process.env.REACT_APP_API_KEY}`;
+const Track_URL = `/track.get?apikey=${process.env.REACT_APP_API_KEY}`;
+
 export default function TrackDetails() {
   const [track, setTrack] = useState({});
   const [lyrics, setLyrics] = useState({});
   const [loading, setLoading] = useState(true);
 
-  let { id } = useParams(); //to get the id from  the path of TrackDetails in app.js
+  let { id } = useParams();
 
   useEffect(() => {
     axios
-      .get(
-        `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?track_id=${id}&apikey=${process.env.REACT_APP_API_KEY}`
-      )
+      .get(Lyrics_URL, {
+        params: { track_id: id },
+      })
       .then((res) => {
         setLyrics(res.data.message.body.lyrics);
-        return axios.get(
-          `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?track_id=${id}&apikey=${process.env.REACT_APP_API_KEY}`
-        );
+        return axios.get(Track_URL, { params: { track_id: id } });
       })
       .then((res) => {
         setTrack(res.data.message.body.track);
         setLoading(false);
       })
       .catch((err) => console.log(err));
-  }, []);
+  }, [id]);
   return (
     <>
       {loading ? (
