@@ -9,9 +9,7 @@ export const initstate = {
   trackname: "",
 };
 
-//  "proxy": "https://api.musixmatch.com/ws/1.1",
-
-const SEARCH_URL = `https://api.musixmatch.com/ws/1.1/track.search?page_size=10&page=1&f_has_lyrics=1&s_track_rating=desc&apikey=${process.env.REACT_APP_API_KEY}`;
+const SEARCH_URL = `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.search?page_size=10&page=1&f_has_lyrics=1&s_track_rating=desc&apikey=${process.env.REACT_APP_API_KEY}`;
 
 export let Context = createContext();
 
@@ -20,10 +18,6 @@ export const Provider = ({ children }) => {
   useEffect(() => {
     axios
       .get(SEARCH_URL, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-        },
         params: { q: state.trackname },
       })
       .then((res) => {

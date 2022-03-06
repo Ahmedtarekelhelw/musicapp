@@ -4,8 +4,8 @@ import axios from "axios";
 import Spinner from "../layout/Spinner";
 import moment from "moment";
 
-const Lyrics_URL = `https://api.musixmatch.com/ws/1.1/track.lyrics.get?apikey=${process.env.REACT_APP_API_KEY}`;
-const Track_URL = `https://api.musixmatch.com/ws/1.1/track.get?apikey=${process.env.REACT_APP_API_KEY}`;
+const Lyrics_URL = `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.lyrics.get?apikey=${process.env.REACT_APP_API_KEY}`;
+const Track_URL = `https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/track.get?apikey=${process.env.REACT_APP_API_KEY}`;
 
 export default function TrackDetails() {
   const [track, setTrack] = useState({});
@@ -17,19 +17,11 @@ export default function TrackDetails() {
   useEffect(() => {
     axios
       .get(Lyrics_URL, {
-        headers: {
-          "Access-Control-Allow-Origin": "*",
-          "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-        },
         params: { track_id: id },
       })
       .then((res) => {
         setLyrics(res.data.message.body.lyrics);
         return axios.get(Track_URL, {
-          headers: {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-          },
           params: { track_id: id },
         });
       })
